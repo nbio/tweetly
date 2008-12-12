@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Status - {{ block.super }}{% endblock %}
+{% block body_class %}status{% endblock %}
+
+{% block beta %}
+<h1>Status</h1>
+
+<ul class="sections">
+    <li>
+        <div class="section">
+        <h3><a href="http://groups.google.com/group/google-appengine-downtime-notify/" target="_blank">Memcache</a></h3>
+    {% if status.memcache %}
+            <p class="win">Is cooking you bacon.</p>
+            <ul>
+                <li>Hits: {{ status.memcache.hits }}</li>
+                <li>Misses: {{ status.memcache.misses }}</li>
+                <li>Byte hits: {{ status.memcache.byte_hits }}</li>
+                <li>Total items: {{ status.memcache.items }}</li>
+                <li>Total bytes: {{ status.memcache.bytes }}</li>
+                <li>Oldest: {{ status.memcache.oldest_item_age }}</li>
+            </ul>
+    {% else %}
+            <p class="fail">Is hunting pandas.</p>
+    {% endif %}
+        </div>
+
+        <div class="section">
+            <h3><a href="{{ settings.DOMAINR_SERVER_URL }}?domain=google.com" target="_blank">The Pony</a></h3>
+    {% if status.dns %}
+            <p class="win">Is alive.</p>
+    {% else %}
+            <p class="fail">Is glue.</p>
+    {% endif %}
+        </div>
+
+        <div>
+            <h3>You</h3>
+            <p class="win">Are awesome.</p>
+        </div>
+    </li>
+    
+    {% with status.registrar_coverage as rc %}
+    <li>
+        <h3>Registrar</h3>
+        <p><img src="{{ rc.chart_url }}" alt="Chart" /></p>
+        <ul>
+            <li>With registrars: {{ rc.with_registrars }}</li>
+            <li>Without: {{ rc.without_registrars }}</li>
+            <li>No subreg: {{ rc.no_subreg }}</li>
+        </ul>
+    </li>
+    {% endwith %}
+    
+    {% with status.affiliate_coverage as ac %}
+    <li>
+        <h3>Affiliate</h3>
+        <p><img src="{{ ac.chart_url }}" alt="Chart" /></p>
+        <ul>
+            <li>With affiliates: {{ ac.with_affiliates }}</li>
+            <li>Without: {{ ac.without_affiliates }}</li>
+        </ul>
+    </li>
+    {% endwith %}
+</ul>
+{% endblock %}

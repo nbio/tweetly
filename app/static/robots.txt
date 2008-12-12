@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /_s/
+Disallow: /john/mccain/in/the/white/house/

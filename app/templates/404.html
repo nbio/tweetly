@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body_class %}404 error{% endblock %}
+
+{% block beta %}
+<h1>404</h1>
+<h3 class="fail status">Sad panda! We can’t seem to find this page.</h3>
+<p>We thought maybe you’d like a frosted pony to make up for it:</p>
+<div><img src="{% static_url /_s/i/pony.png %}" /></div>
+{% endblock %}

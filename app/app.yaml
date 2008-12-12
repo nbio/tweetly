@@ -1,0 +1,37 @@
+application: tweet-ly
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /_s
+  static_dir: static
+  expiration: 1h
+
+- url: /robots.txt
+  static_files: static/robots.txt
+  upload: static/robots.txt
+  mime_type: text/plain
+  expiration: 1h
+
+- url: /favicon.ico
+  static_files: static/i/favicon.ico
+  upload: static/i/favicon.ico
+  mime_type: image/vnd.microsoft.icon
+  expiration: 1h
+
+# - url: /google-webmastertools-hashcodeblahblah.html
+#   static_files: static/gwt.html
+#   upload: static/gwt.html
+#   mime_type: text/html
+
+- url: /.*/(rss|atom)/?
+  script: main.py
+
+- url: /_admin/.*
+  script: main.py
+  login: admin
+
+- url: /.*
+  script: main.py
+  #login: required

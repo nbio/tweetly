@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>{% app_url %}about/</loc></url>
+{% for domain in domains %}    <url><loc>{% app_url %}{{ domain.domain }}/</loc></url>
+{% endfor %}
+</urlset>
+    {% comment %}
+        <lastmod>2005-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    {% endcomment %}
