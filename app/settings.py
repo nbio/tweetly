@@ -139,7 +139,7 @@ HOSTS = {
 
 HOST_FILTERS = (
     re.compile(r'^localhost\d*$'),
-    re.compile(r'\.latest\.domai-nr\.appspot\.com$'),
+    re.compile(r'\.latest\.tweet-ly\.appspot\.com$'),
 )
 
 ALLOWED_USERS = (
