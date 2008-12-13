@@ -4,9 +4,22 @@
 {{ block.super }}
 <meta name="description" content="{{ settings.PRODUCT_NAME }} solves all your problems" />
 <style type="text/css" media="screen">
-  body.home h1 {
-    background: white url({% static_url /_s/i/tweetly.png %}) top center;
-  }
+    body {
+        margin: 20px;
+        padding: 0;
+        background: #fff;
+        text-align: center;
+    }
+    
+    h1 {
+        position: relative;
+        overflow: hidden;
+        width: 1000px;
+        height: 1300px;
+        margin: 0 auto;
+        background: url({% static_url /_s/i/tweetly.png %}) center center no-repeat;
+        text-indent: -1000em;
+    }
 </style>
 {% endblock %}
 
