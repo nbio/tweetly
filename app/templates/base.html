@@ -47,7 +47,9 @@
                     <ul id="nav">
                         <li class="about"><a href="{% app_url %}about/">About</a></li>
                         <li class="blog"><a href="{% app_url %}about/blog/">Blog</a></li>
+        {% comment %}
                         <li class="twitter"><a href="{% app_url %}about/twitter/" title="Follow us on Twitter">Twitter</a></li>
+        {% endcomment %}
                         <li class="contact">{% include 'modules/contact_link.html' %}</li>
                         <li class="last copyright">&copy; {% now "Y" %} <a href="{{ settings.COMPANY_URL }}">{{ settings.COMPANY_NAME }}</a></li>
                     </ul>
