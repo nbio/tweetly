@@ -3,11 +3,16 @@
 {% block head %}
 {{ block.super }}
 <meta name="description" content="{{ settings.PRODUCT_NAME }} solves all your problems" />
+<style type="text/css" media="screen">
+  body.home h1 {
+    background: white url({% static_url /_s/i/tweetly.png %}) top center;
+  }
+</style>
 {% endblock %}
 
 {% block body_class %}home{% endblock %}
 {% block header_h1 %}<h1><a href="/">{{ settings.PRODUCT_NAME }}</a></h1>{% endblock %}
 
-{% block beta %}
-<div class="hilite"><h2>Solves all your problems.</h2></div>
+{% block body %}
+<h1>Tweetly</h1>
 {% endblock %}
