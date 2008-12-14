@@ -40,8 +40,7 @@ PRODUCT_EMAIL = 'ping@' + DOMAIN_NAME
 COMPANY_NAME = 'nb.io'
 COMPANY_URL = 'http://nb.io/'
 
-GOOGLE_ANALYTICS_ID = '' #TODO: add analytics!
-QUANTSERVE_KEY = '' #TODO: add quantserve key!
+GOOGLE_ANALYTICS_ID = 'UA-3336530-8' #TODO: add analytics!
 
 ADMINS = (
     ('Tweetly Admin', 'info@' + DOMAIN_NAME),
