@@ -1,6 +1,3 @@
-[submodule "app/appengine_django"]
-	path = app/appengine_django
-	url = git://github.com/nbio/google-appengine-django.git
 [submodule "app/nbio/django"]
 	path = app/nbio/django
 	url = git://github.com/nbio/nbio-django.git

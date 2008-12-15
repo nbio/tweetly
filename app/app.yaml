@@ -25,13 +25,6 @@ handlers:
 #   upload: static/gwt.html
 #   mime_type: text/html
 
-- url: /.*/(rss|atom)/?
-  script: main.py
-
-- url: /_admin/.*
-  script: main.py
-  login: admin
-
 - url: /.*
-  script: main.py
+  script: common/appenginepatch/main.py
   #login: required

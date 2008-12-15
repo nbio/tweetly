@@ -121,7 +121,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 INSTALLED_APPS = (
-    'appengine_django',
+    'appenginepatch',
     'nbio.django',
 #    'django.contrib.auth',
 #    'django.contrib.contenttypes',
