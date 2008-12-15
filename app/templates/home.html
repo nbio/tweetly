@@ -9,6 +9,7 @@
         padding: 0;
         background: #fff;
         text-align: center;
+        font: 24px/30px "hoefler text", "times new roman", times, serif;
     }
     
     h1 {
@@ -28,4 +29,8 @@
 
 {% block body %}
 <h1>Tweetly</h1>
+    {% comment %}
+<p>Twitter client developers, visit the <a href="http://groups.google.com/groups/tweetly/">Tweetly group on Google Groups</a>.</p> -->
+<p>{ &copy; {% now "Y" %} <a href="{{ settings.COMPANY_URL }}">{{ settings.COMPANY_NAME }}</a> }</p>
+    {% endcomment %}
 {% endblock %}
