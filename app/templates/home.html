@@ -9,7 +9,10 @@
 {% block header_h1 %}<h1><a href="/">{{ settings.PRODUCT_NAME }}</a></h1>{% endblock %}
 
 {% block body %}
-<h1>Tweetly</h1>
+<div id="hatch">
+    <h1><a href="{% app_url %}" title="{{ settings.PRODUCT_NAME }}">{{ settings.PRODUCT_NAME }} solves all your problems as long as your only problem is reading the same tweet twice.</a></h1>
+    <a href="{{ settings.COMPANY_URL }}" class="nbio">a {{ settings.COMPANY_NAME }} hatch</a>
+</div>
     {% comment %}
 <p>Twitter client developers, visit the <a href="http://groups.google.com/groups/tweetly/">Tweetly group on Google Groups</a>.</p>
 <p>{ &copy; {% now "Y" %} <a href="{{ settings.COMPANY_URL }}">{{ settings.COMPANY_NAME }}</a> }</p>

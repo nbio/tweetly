@@ -30,7 +30,11 @@ legend{color:#000;}
 
 body, input, textarea, select {
     font: normal 14px/18px "hoefler text", times, "times new roman", "hiraminpro-w3", "ms mincho", serif;
-    color: #414240;
+    color: #000;
+}
+
+body {
+    background: #efff8a;
 }
 
 /* **/
@@ -131,14 +135,32 @@ body {
 
 /** home */
 
-body.home h1 {
+div#hatch {
+    display: block;
     position: relative;
     overflow: hidden;
     width: 960px;
     height: 1300px;
     margin: 0 auto;
     background: url(tweetly.png) center center no-repeat;
+}
+
+div#hatch a {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;
     text-indent: -1000em;
+}
+
+div#hatch a.nbio {
+    top: 1120px;
+    left: 430px;
+    width: 100px;
+    height: 30px;
 }
 
 /* **/
