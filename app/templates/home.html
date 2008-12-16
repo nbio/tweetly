@@ -3,25 +3,6 @@
 {% block head %}
 {{ block.super }}
 <meta name="description" content="{{ settings.PRODUCT_NAME }} solves all your problems" />
-<style type="text/css" media="screen">
-    body {
-        margin: 20px;
-        padding: 0;
-        background: #fff;
-        text-align: center;
-        font: 24px/30px "hoefler text", "times new roman", times, serif;
-    }
-    
-    h1 {
-        position: relative;
-        overflow: hidden;
-        width: 1000px;
-        height: 1300px;
-        margin: 0 auto;
-        background: url({% static_url /_s/i/tweetly.png %}) center center no-repeat;
-        text-indent: -1000em;
-    }
-</style>
 {% endblock %}
 
 {% block body_class %}home{% endblock %}
@@ -30,7 +11,7 @@
 {% block body %}
 <h1>Tweetly</h1>
     {% comment %}
-<p>Twitter client developers, visit the <a href="http://groups.google.com/groups/tweetly/">Tweetly group on Google Groups</a>.</p> -->
+<p>Twitter client developers, visit the <a href="http://groups.google.com/groups/tweetly/">Tweetly group on Google Groups</a>.</p>
 <p>{ &copy; {% now "Y" %} <a href="{{ settings.COMPANY_URL }}">{{ settings.COMPANY_NAME }}</a> }</p>
     {% endcomment %}
 {% endblock %}

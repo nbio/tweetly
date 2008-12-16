@@ -5,13 +5,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}{{ settings.DEFAULT_TITLE }}{% endblock %}</title>
         <link rel="awesome" type="text/html" href="http://nb.io/" />
-    {% comment %}
         <link rel="icon favicon" href="{% static_url /_s/i/favicon.png %}" />
         <link rel="apple-touch-icon" href="{% static_url /_s/i/touch-icon.png %}" />
     {% block head_links %}
         <link rel="stylesheet" media="screen" href="{% static_url /_s/css/base/screen.css %}" />
     {% endblock %}
-    {% endcomment %}
 {% endblock %}
     </head>
     <body class="{% block body_class %}{% endblock %}">
@@ -27,8 +25,7 @@
                 <div id="content-inner">
     {% block content %}
                 <div id="alpha">
-        {% block alpha %}
-        {% endblock %}
+        {% block alpha %}{% endblock %}
                 </div>
                 <div id="beta">
         {% block beta %}{% endblock %}

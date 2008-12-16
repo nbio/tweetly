@@ -1,0 +1,212 @@
+/*
+YUI Recent CSS copyright Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.5.2
+*/
+html{color:#000;background:#fff;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym {border:0;font-variant:normal;}
+/* to preserve line-height and selector appearance */
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+/*to enable resizing for IE*/
+input,textarea,select{*font-size:100%;}
+/*because legend doesn't inherit in IE */
+legend{color:#000;}
+
+
+/* Tweetly CSS, copyright nb.io, LLC */
+
+/** type */
+
+body, input, textarea, select {
+    font: normal 14px/18px "hoefler text", times, "times new roman", "hiraminpro-w3", "ms mincho", serif;
+    color: #414240;
+}
+
+/* **/
+
+
+/** links */
+
+a {
+    color: #2870b0;
+    text-decoration: none;
+}
+
+a:active {
+    color: #18436a;
+    -moz-outline: none;
+}
+
+/* **/
+
+
+/** general */
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+abbr { border-bottom: 1px dotted #a9ada8; }
+blockquote { padding-left: 20px; }
+
+.content ul,
+.content ol {
+    padding-left: 20px;
+}
+
+img.left { margin: 0 15px 15px 0; }
+img.right { margin: 0 0 15px 15px; }
+
+.content ul li { list-style: disc inside; }
+.content ol li { list-style: decimal inside; }
+
+/* **/
+
+
+/** form elements */
+
+input.text,
+textarea {
+    position: relative;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -khtml-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -khtml-appearance: none;
+    -moz-appearance: none;
+}
+
+input:focus { outline: none; }
+
+/* **/
+
+
+/** layout */
+
+body {
+    text-align: center;
+}
+
+#container {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#footer {
+    border-top: 3px solid #f7f8f6;
+    padding-top: 12px;
+    background: #fff;
+}
+
+#footer-inner {
+    padding: 0 0 30px 0;
+}
+
+#footer li {
+    float: left;
+    margin-right: 4px;
+    border-right: 1px solid #b3b8b2;
+    padding-right: 5px;
+}
+
+#footer li.last { border: none; }
+
+
+/** home */
+
+body.home h1 {
+    position: relative;
+    overflow: hidden;
+    width: 960px;
+    height: 1300px;
+    margin: 0 auto;
+    background: url(tweetly.png) center center no-repeat;
+    text-indent: -1000em;
+}
+
+/* **/
+
+
+
+/** utility */
+
+body .debug { outline: 1px dotted red; }
+
+#grid { display: none; }
+
+body.debug #grid {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: url(15.png) 0 0 repeat;
+    opacity: 0.25;
+    filter: alpha(opacity=25);
+}
+
+.left { float: left; }
+.right { float: right; }
+
+.clr {
+    overflow: hidden;
+    clear: both;
+    width: 1px;
+    height: 1px;
+    margin: 0 -1px -1px 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* **/
+
+
+/* get satisfaction */
+
+#fdbk_tab { display: none !important; }
+
+
+/* .pkg class wraps enclosing block element around inner floated elements */
+.pkg:after,
+#content:after {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0.1px;
+    font-size: 0.075em;
+    line-height: 0;
+}
+
+.pkg,
+#content { display: inline-block; }
+
+
+/* no ie mac \*/
+* html .pkg,
+* html #content { height: 1%; }
+.pkg[class],
+#content[id] { height: auto; }
+.pkg,
+#content { display: block; }
