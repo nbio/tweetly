@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Dogears - {{ block.super }}{% endblock %}
+{% block body_class %}dogears{% endblock %}
+
+{% block beta %}
+<h1>Dogears</h1>
+
+    {% for dogear in dogears %}
+<div>
+  <p>Dogear: {{ dogear.safe_key }}</p>
+  <p>Item: {{ dogear.item_id }}</p>
+  <p>Time: {{ dogear.item_time }}</p>
+  <p>Delegate: {{ dogear.delegate.opaque_id }}</p>
+</div>
+    {% endfor %}
+{% endblock %}
+

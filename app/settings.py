@@ -141,6 +141,9 @@ HOST_FILTERS = (
     re.compile(r'\.latest\.tweet-ly\.appspot\.com$'),
 )
 
+
+AUTH_USER_MODULE = 'tweetly.models'
+
 ALLOWED_USERS = (
     # developers
     'shaderlab@gmail.com',
